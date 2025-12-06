@@ -1,3 +1,4 @@
+import os
 import uuid
 
 import mlflow
@@ -15,6 +16,8 @@ RANDOM_STATE = 123456
 
 
 def main():
+    tracking_uri = os.path.join(os.getcwd(), "mlruns")
+    mlflow.set_tracking_uri(f"file://{tracking_uri}")
 
     args = parse_argument()
     model = select_model(args)
