@@ -1,6 +1,6 @@
 import uuid
 
-import mlflow  # type: ignore
+import mlflow
 
 from homework.src._internals.calculate_metrics import calculate_metrics
 from homework.src._internals.parse_argument import parse_argument
